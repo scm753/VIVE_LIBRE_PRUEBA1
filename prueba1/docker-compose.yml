@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  auth-vivelibre:
+    container_name: auth-vivelibre
+    image: skeet15/auth-vivelibre
+    build: .
+    ports:
+     - 8080:8080
+  prueba1:
+    container_name: prueba1-main
+    image: scm/prueba1
+    build: .
+    ports: 
+     - 8081:8081
+    depends_on:
+    - auth-vivelibre
+    external_links:
+      - auth-vivelibre:auth-vivelibre
+    
+  
