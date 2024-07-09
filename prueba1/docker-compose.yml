@@ -7,9 +7,9 @@ services:
     build: .
     ports:
      - 8080:8080
-  prueba1:
+  vivelibreprueba1:
     container_name: prueba1-main
-    image: scm/prueba1
+    image: scm753/vivelibreprueba1
     build: .
     ports: 
      - 8081:8081
